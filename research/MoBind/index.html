@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="MoBind: Motion Binding for Fine-Grained IMU–Video Pose Alignment">
+    <meta name="keywords" content="MoBind, IMU, Video Pose Alignment">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MoBind: Motion Binding for Fine-Grained IMU–Video Pose Alignment</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-PYVRSFMDRL');
+    </script> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!--<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="https://keunhong.com">
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More Research
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://hypernerf.github.io">
+                        HyperNeRF
+                    </a>
+                    <a class="navbar-item" href="https://nerfies.github.io">
+                        Nerfies
+                    </a>
+                    <a class="navbar-item" href="https://latentfusion.github.io">
+                        LatentFusion
+                    </a>
+                    <a class="navbar-item" href="https://photoshape.github.io">
+                        PhotoShape
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>-->
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">MoBind: Motion Binding for Fine-Grained IMU–Video Pose Alignment</h1>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                            <a href="https://duyddwcs.github.io/" target="_blank">Duc Duy Nguyen</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://researchers.adelaide.edu.au/profile/tat-jun.chin" target="_blank">Tat-Jun Chin</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://minhhoai.net/" target="_blank">Minh Hoai</a>,
+                        </span>
+                    </div>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">Australian Institute for Machine Learning, Adelaide University</span>
+                    </div>
+                    <p> CVPR 2026</p>
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <span class="link-block">
+                                <a href="https://arxiv.org/pdf/2602.19004" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://github.com/bbvisual/MoBind" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <img src="./static/figures/tesear.png" class="interpolation-image" alt="Image." style="width:80%;display:block;margin:0 auto;"/>
+            <h2 class="content has-text-justified" style="margin-top:2em;">
+                <b>Proposed framework for motion binding between IMUs and 2D keypoints sequence from video.</b> Contrastive learning is applied at both the local space, aligning each IMU with its corresponding body-part, and the global space, aligning full-body representations. This representation supports several downstream tasks, including cross-modal retrieval, temporal synchronization, subject and body parts localization, and human action recognition.
+            </h2>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    We aim to learn a joint representation between inertial measurement unit (IMU) signals and 2D pose sequences extracted from video, enabling accurate cross-modal retrieval, temporal synchronization, subject and body-part localization, and action recognition. To this end, we introduce MoBind, a hierarchical contrastive learning framework designed to address three challenges: (1) filtering out irrelevant visual background, (2) modeling structured multi-sensor IMU configurations, and (3) achieving fine-grained, sub-second temporal alignment. To isolate motion-relevant cues, MoBind aligns IMU signals with skeletal motion sequences rather than raw pixels. We further decompose full-body motion into local body-part trajectories, pairing each with its corresponding IMU to enable semantically grounded multi-sensor alignment. To capture detailed temporal correspondence, MoBind employs a hierarchical contrastive strategy that first aligns token-level temporal segments, then fuses local (body-part) alignment with global (body-wide) motion aggregation. Evaluated on mRi, TotalCapture, and EgoHumans, MoBind consistently outperforms strong baselines across all four tasks, demonstrating robust fine-grained temporal alignment while preserving coarse semantic consistency across modalities.
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Architecture. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">MoBind Architecture</h2>
+                <img src="./static/figures/mobind.png" class="interpolation-image" alt="Image." width="100%" style="margin-bottom: 20px;"/><br>
+                <h2 class="content has-text-justified">
+                    MoBind first encodes each IMU stream together with the motion of its corresponding body part from the skeleton keypoints extracted from video, yielding token-level and local-level representations per sensor. These local representations are then aggregated across sensors to form global-level embeddings. The contrastive objective applies at all three levels. In addition, a Masked Token Prediction (MTP) module is used only during training to preserve coarse semantic structure, preventing the model from over-focusing on fine-grained alignment.
+                </h2>
+            </div>
+        <!--/ Architecture. -->
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Cross-Modal Retrieval -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Cross-Modal Retrieval</h2>
+                <img src="./static/figures/retrieval.png" class="interpolation-image" alt="Image." style="margin-bottom: 20px;"/>
+                <h2 class="content has-text-justified">
+                    Given a short segment from one modality, the goal is to retrieve the corresponding moment in the other. Each example here shows the query IMU signal, its corresponding ground-truth video segment, and the top three retrieved video segments. MoBind successfully retrieves the ground-truth segment, and the other top-ranked results are also visually similar to the ground truth.    
+                </h2>
+            </div>
+        <!--/ Cross-Modal Retrieval. -->
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Temporal Synchronization. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Temporal Synchronization</h2>
+                <img src="./static/figures/sync.png" class="interpolation-image" alt="Image." style="margin-bottom: 20px;"/>
+        
+                <div class="content has-text-justified">
+                    Given paired IMU–video sequences, this task aims to estimate the temporal offset between the two modalities. Here, we show four 20-second examples: the top row shows the IMU signals, while the bottom row shows the offset histogram obtained by accumulating predictions from short temporal segments. The results demonstrate that our method remains effective even under highly repetitive movements, where temporal alignment is often ambiguous.    
+                </div>
+            </div>
+        </div>
+        <!--/ Temporal Synchronization -->
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Localization. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Spatial Localization</h2>
+            </div>
+        </div>
+        <img src="./static/figures/localize.png" class="interpolation-image" alt="Image." style="width:80%;display:block;margin:0 auto;"/>
+        <div class="content has-text-justified" style="width:80%;margin:1em auto 0;">
+            Given a synchronized IMU segment and a multi-person video, we identify the IMU wearer by comparing the IMU global embedding with each person’s global pose embedding produced by MoBind, using cosine similarity. The person with the highest similarity score is assigned as the IMU wearer.
+            For body-part association, we follow the same principle at the local level. Specifically, we compare the IMU local embedding with candidate body-part embeddings across all detected individuals, and assign the IMU to the subject–body-part pair with the highest similarity.
+            Here, we show qualitative examples of body-part localization, where the IMU signal shown in the top row is correctly matched to both the corresponding subject and the worn body location.
+
+        </div>
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@InProceedings{nguyen2026mobind,
+  author    = {Nguyen, Duc Duy and Chin, Tat-Jun and Hoai, Minh},
+  title     = {MoBind: Motion Binding for Fine-Grained IMU--Video Pose Alignment},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026},
+}
+        </code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website template was borrowed from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
